@@ -1,5 +1,6 @@
 
 .btn{
+    &,
     &:link,
     &:visited{
         text-transform: uppercase;
@@ -15,6 +16,10 @@
         -moz-user-select: none;   
         -ms-user-select: none;  
         user-select: none;
+
+         //Change for the <button> element
+         border: none;
+         cursor: pointer;
     }
     &:hover{
         transform: translateY(-.3rem);
