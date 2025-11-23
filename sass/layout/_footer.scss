@@ -1,0 +1,44 @@
+.footer {
+    // ...existing code...
+    
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
+
+    &__logo-box {
+        @include respond(tab-port) {
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__navigation {
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__list {
+        @include respond(tab-port) {
+            display: block;
+        }
+    }
+
+    &__item {
+        @include respond(tab-port) {
+            display: inline-block;
+            
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+
+    &__copyright {
+        @include respond(tab-port) {
+            width: 100%;
+            float: none;
+            margin-top: 3rem;
+        }
+    }
+}

@@ -25,4 +25,13 @@
         box-shadow: 0 2.5rem 4rem rgba($color-black, 0.2);
     }
             
+    @include respond(tab-port) {
+        padding: 2rem;
+    }
+
+    &__icon {
+        @include respond(tab-port) {
+            margin-bottom: 0;
+        }
+    }
 }

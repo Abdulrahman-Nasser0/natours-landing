@@ -7,13 +7,24 @@
 
     clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
     
+    @include respond(phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+    
     &__logo-box{
         position: absolute;
         top: 4rem;
         left: 4rem;
+        @include respond(phone) {
+            top: 3rem;
+            left: 3rem;
+        }
     }
     &__logo{
         height: 3.5rem;
+        @include respond(phone) {
+            height: 3rem;
+        }
     }
     
     &__text-box{
@@ -22,6 +33,10 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        padding: 0 2rem;
+        @include respond(phone) {
+            padding: 0 2rem;
+        }
     }
 
 }

@@ -16,6 +16,17 @@
         text-align: center;
         cursor: pointer;
 
+        @include respond(tab-port) {
+            top: 4rem;
+            right: 4rem;
+        }
+        
+        @include respond(phone) {
+            top: 3.5rem;
+            right: 3.5rem;
+            height: 6rem;
+            width: 6rem;
+        }
     }
 
     &__background {
@@ -29,6 +40,17 @@
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
+        @include respond(tab-port) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+        
+        @include respond(phone) {
+            top: 4rem;
+            right: 4rem;
+            height: 5rem;
+            width: 5rem;
+        }
     }
 
     &__nav {
@@ -37,7 +59,6 @@
         top: 0;
         left: 0;
         z-index: 1500;
-
         opacity: 0;
         width: 0;
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -47,7 +68,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         list-style: none;
         text-align: center;
         width: 100%;
@@ -55,6 +76,10 @@
 
     &__item {
         margin: 1rem;
+
+        @include respond(phone) {
+            margin: .8rem;
+        }
     }
 
     &__link {
@@ -71,12 +96,21 @@
             background-size: 220%;
             transition: all .4s;
 
+            @include respond(phone) {
+                font-size: 2.5rem;
+                padding: .8rem 1.5rem;
+            }
+
             span {
                 margin-right: 1.5rem;
                 display: inline-block;
+
+                @include respond(phone) {
+                    margin-right: 1rem;
+                }
             }
         }
-        
+
         &:hover,
         &:active {
             background-position: 100%;
@@ -85,8 +119,6 @@
         }
     }
 
-
-    //FUNCTIONALITY
     &__checkbox:checked ~ &__background {
         transform: scale(80);
     }
@@ -96,11 +128,13 @@
         width: 100%;
     }
 
-
-    //ICON
     &__icon {
         position: relative;
         margin-top: 3.5rem;
+
+        @include respond(phone) {
+            margin-top: 3rem;
+        }
 
         &,
         &::before,
@@ -109,6 +143,10 @@
             height: 2px;
             background-color: $color-grey-dark-3;
             display: inline-block;
+
+            @include respond(phone) {
+                width: 2.5rem;
+            }
         }
 
         &::before,
